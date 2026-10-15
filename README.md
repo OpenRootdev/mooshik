@@ -243,29 +243,6 @@ This populates the graph with historical context so you can immediately search p
 
 ---
 
-## Built for the All Things Agentic Hackathon
-
-Mooshik is built for the All Things Agentic Hackathon.
-
-### Compliance matrix
-
-| Category | Implementation | Verified source |
-| :--- | :--- | :--- |
-| **Gemini 3.5 or newer** | Companion runs `gemini-3.7-flash` on Vertex AI at the `global` location. Python servers use the same model default. | [`mooshik-common/mooshik_common/models.py`](mooshik-common/mooshik_common/models.py) |
-| **Google Agent Framework** | The bootstrap ingester uses Google ADK. The artifacts MCP server uses ADK `LlmAgent` for multimodal extraction. | [`ingester/agent.py`](ingester/agent.py), [`mcp-servers/artifacts/server.py`](mcp-servers/artifacts/server.py) |
-| **Google Cloud Infrastructure** | Cloud SQL PostgreSQL with pgvector acts as the shared cross-machine graph store. Cloud Run Jobs run the bootstrap ingester with Cloud SQL Auth Proxy. | [`ingester/README.md`](ingester/README.md), [`src/memory/ops.rs`](src/memory/ops.rs) |
-
-Veo and Lyria were dropped because Mooshik does not generate media assets. Gemma is not configured in the active runtime.
-
-### Submission checklist
-
-- **Reproducibility:** Follow the installation and `mooshik init` instructions above. The [Reproducible testing](#reproducible-testing) section runs 899 offline tests with no credentials and no network.
-- **Architecture diagram:** Included above.
-- **Repository:** [https://github.com/nrynss/mooshik](https://github.com/nrynss/mooshik)
-- **Hosted service:** Mooshik runs as a local binary and does not require a hosted web application.
-
----
-
 ## Status and roadmap
 
 - **Phase 1: Terminal (Shipped).** Rust core runtime, embedded Lambo graph memory, interactive TUI, workspace watcher, reflection engine, and MCP server ecosystem.
