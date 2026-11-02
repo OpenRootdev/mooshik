@@ -5,7 +5,7 @@ description = "Mooshik artifacts MCP server: non-text workspace artifact extract
 requires-python = ">=3.10"
 dependencies = [
     "mooshik-common==0.2.1",
-    "mcp==2.1.1",
+    "mcp==2.2.0",
     "google-genai==2.20.0",
     "google-adk==2.7.1",
 ]
