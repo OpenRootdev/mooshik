@@ -12,7 +12,7 @@ dependencies = [
     # Cursor Agent CLI, Antigravity CLI) rather than calling Gemini itself.
     # The only SDK dependency is MCP for the stdio wire.
     "mooshik-common==0.2.1",
-    "mcp==2.1.1",
+    "mcp==2.2.0",
 ]
 
 [project.optional-dependencies]
